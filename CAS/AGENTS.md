@@ -1,15 +1,10 @@
-# Use Playwright MCP for this task.
-
 ## Objective:
-Open the following academic journal websites ONE BY ONE using 
-Playwright, navigate to their Current/Latest Issue, and extract 
-bibliographic details of all individual articles listed in that issue.
+Open the following academic journal websites ONE BY ONE using Playwright, navigate to their Current/Latest Issue, and extract  bibliographic details of all individual articles listed in that issue.
 
 ## Target Journal Websites:
-1. https://www.emerald.com/ajim
-2. https://www.tandfonline.com/journals/wcol20
+1. https://journal.gujaratvidyapith.org/index.php/vp
 
-## ⚠️ STRICT RULES - READ CAREFULLY BEFORE STARTING:
+## STRICT RULES - READ CAREFULLY BEFORE STARTING:
 
 ### URL Control Rules (MOST IMPORTANT):
 - You must process ONLY ONE journal at a time
@@ -33,17 +28,9 @@ bibliographic details of all individual articles listed in that issue.
   article pages for the current issue being processed
 
 ### Allowed URL Patterns:
-- For Journal 1 (Emerald - LHT):
-  * Allowed: https://www.emerald.com/ajim/*
-  * Allowed: https://www.emerald.com/ajim/article/78/4/*
-  * NOT Allowed: Any other emerald journal URL or 
-                 any non-emerald URL
-
-- For Journal 2 (Springer - Scientometrics):
-  * Allowed: https://www.tandfonline.com/journals/wcol20/*
-  * Allowed: https://www.tandfonline.com/doi/full/10.1080/01462679*
-  * NOT Allowed: Any other springer journal URL or 
-                 any non-springer URL
+- For Journal:
+  * Allowed: https://journal.gujaratvidyapith.org/index.php/vp*
+  * NOT Allowed: Any other journal URL 
 
 ---
 
@@ -96,9 +83,7 @@ bibliographic details of all individual articles listed in that issue.
   ✔ Article Title
   ✔ Author Name(s) — all authors, comma separated
   ✔ Keywords — all keywords, comma separated
-  ✔ Abstract — full abstract text
-  ✔ DOI — in full URL format 
-           (e.g. https://doi.org/10.xxxx/xxxxx)
+  ✔ Abstract — full abstract text if available else write 'Abstract Not Available'
   ✔ Page Numbers — (e.g. 123-145)
 
 - If any field is not available, mark it as "Not Available"
@@ -118,6 +103,7 @@ bibliographic details of all individual articles listed in that issue.
   in ascending order
 - Maintain strict separation between journals 
   during organization
+- Maintain the language script as it is.
 
 ### Step 6: PDF Generation - Newsletter Format
 After ALL journals are fully extracted and data is 
@@ -136,16 +122,14 @@ PDF file named:
 
 **PDF Structure:**
 
----
 [PAGE 1 - COVER PAGE]
-- Use ADINET transparent logo (https://www.alibnet.org/public/adinet_logo.png) in center
+- Use ADINET transparent logo (adomet_logo.png) in center
 - Newsletter Title: "CUCOLIS"
 - Subtitle: "CURRENT CONTENTS FOR LIBRARY AND INFORMATION SCIENCE"
 - Period: (today's Month and Year)
 - List of Journals covered in this newsletter
   with their Volume and Issue details
 - A horizontal divider line
----
 
 [FOR EACH JOURNAL - New Section starts on a new page]
 
@@ -174,57 +158,42 @@ PDF file named:
 ► JOURNAL SECTION FOOTER:
   - Total number of articles extracted for that journal
 
----
 
 [LAST PAGE - Summary]
 - Total journals processed
 - Total articles extracted (journal-wise breakdown)
 
 - Data source URLs
----
 
 ## Output File:
 - File Name: Journal_Current_Issue_Newsletter.pdf
-- Save in the current working directory
+- Save in the folder Output
 - Ensure PDF is properly formatted and readable
 
----
 
-## ⚠️ Final Important Rules:
+## Final Important Rules:
 
 1. STRICT JOURNAL ISOLATION: 
    - Never mix data of one journal with another
-   - Never open Journal 2 URL while Journal 1 
-     is still being processed
-   - Never follow links to other journals found 
-     on the current journal page
+   - Never open Journal 2 URL while Journal 1 is still being processed
+   - Never follow links to other journals found on the current journal page
 
 2. ARTICLE TRACKING:
-   - Always maintain a counter of 
-     (Articles Found vs Articles Extracted)
+   - Always maintain a counter of (Articles Found vs Articles Extracted)
    - Do not stop extraction until both counts match
 
 3. URL VERIFICATION:
-   - Before visiting any URL, check if it belongs 
-     to the currently active journal domain
-   - If not matching → SKIP that URL → 
-     Continue with next article from saved list
+   - Before visiting any URL, check if it belongs to the currently active journal domain
+   - If not matching → SKIP that URL → Continue with next article from saved list
 
 4. ERROR HANDLING:
-   - If a page fails to load → Retry 2 times → 
-     If still failing → Mark as "Page Load Failed" 
+   - If a page fails to load → Retry 2 times → If still failing → Mark as "Page Load Failed" 
      and move to next article
-   - If a journal website blocks automated access → 
-     Note it in the PDF → Move to next journal
+   - If a journal website blocks automated access → Note it in the PDF → Move to next journal
 
 5. DO NOT:
    - Do not click on "Related Articles" links
    - Do not click on "Recommended for You" links
-   - Do not click on other journal name links 
-     found on the page
+   - Do not click on other journal name links found on the page
    - Do not navigate to publisher homepage
-   - Do not follow any link outside the 
-     current journal's issue page
-
-6. Use ONLY Playwright MCP browser tools for 
-   all web interactions
+   - Do not follow any link outside the current journal's issue page
