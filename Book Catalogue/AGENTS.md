@@ -109,4 +109,7 @@ The given working directory contains multiple PDF files. These PDF files contain
 
 - If any field data is not found or not clearly readable in the PDF, leave that field **blank** in the Excel and **skip or leave empty** in the `.mrc` record. Do not guess or hallucinate values.
 - Ensure the `.mrc` file uses proper **MARC21 binary encoding** (ISO 2709 format) to be compatible with Koha's import tool (`Stage MARC records for import`).
+- While populating the Authors render the Last Name then comma(,) and then remaining name. For example if Author Name is K. M. Munshi then write Munshi, K. M. 
+- Repeat the Added Entry (Additional Authors) same as Authors.
+- Populate the Subject Added Entry in excel as well.
 - Handle **multilingual content** (English/Hindi/Gujarati) carefully, preserving the original script where needed.
