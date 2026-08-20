@@ -46,3 +46,19 @@ Step-12: Click on **``` OpenCodeZen ```**
 Step-13: Paste the newly generated API Key and click on **``` Continue ```**
 
 <img src="/images/13.png" width="800">
+
+Step-14: Search `DeepSeek` in the box and select model  **``` DeepSeek V4 Flash Free ```** given under **``` OpenCode Zen ```** 
+
+<img src="/images/14.png" width="800">
+
+Step-15: Click on  **``` Add project ```**
+
+<img src="/images/15_1.png" width="800">
+
+Select  **``` Book Catalogue ```**
+
+<img src="/images/15_2.png" width="800">
+
+Step-16: Type  **``` Start AGENTS.md ```** or paste the prompt
+
+<img src="/images/16.png" width="800">
