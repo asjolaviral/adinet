@@ -46,4 +46,6 @@ Step-12: Click on **OpenCodeZen**
 
 Step-13: Paste the newly generated API Key and click on **Continue** 
 
+Step-13: Paste the newly generated API Key and click on ${\color{green}\text{Continue}}$
+
 <img src="/images/13.png" width="800">
