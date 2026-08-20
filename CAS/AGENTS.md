@@ -3,6 +3,7 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
 
 ## Target Journal Websites:
 1. https://journal.gujaratvidyapith.org/index.php/vp
+2. https://indianjournals.com/journals/LH
 
 ## STRICT RULES - READ CAREFULLY BEFORE STARTING:
 
@@ -28,9 +29,13 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
   article pages for the current issue being processed
 
 ### Allowed URL Patterns:
-- For Journal:
+- For Journal 1:
   * Allowed: https://journal.gujaratvidyapith.org/index.php/vp*
   * NOT Allowed: Any other journal URL 
+
+- For Journal 2:
+  * Allowed: https://indianjournals.com/journals/LH*
+  * NOT Allowed: Any other journal URL   
 
 ---
 
@@ -103,7 +108,7 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
   in ascending order
 - Maintain strict separation between journals 
   during organization
-- Maintain the language script as it is.
+- Maintain the language script as it is and write it using UTF.
 
 ### Step 6: PDF Generation - Newsletter Format
 After ALL journals are fully extracted and data is 
