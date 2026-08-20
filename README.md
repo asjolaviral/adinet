@@ -62,3 +62,8 @@ Select  **``` Book Catalogue ```**
 Step-16: Type  **``` Start AGENTS.md ```** or paste the prompt
 
 <img src="/images/16.png" width="800">
+
+Step-17: On completion check the project folder  **``` Book Catalogue ```**
+Following two files will be created
+    - ✅ `cataloguing_data.xlsx`
+    - ✅ `catalogue_records.mrc`
