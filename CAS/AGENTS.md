@@ -108,7 +108,7 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
   in ascending order
 - Maintain strict separation between journals 
   during organization
-- Maintain the language script as it is and write it using UTF.
+- Maintain the language script as it is and write it using utf-8 fonts.
 
 ### Step 6: PDF Generation - Newsletter Format
 After ALL journals are fully extracted and data is 
