@@ -1,41 +1,28 @@
 ## Objective:
-Open the following academic journal websites ONE BY ONE using Playwright, navigate to their Current/Latest Issue, and extract  bibliographic details of all individual articles listed in that issue.
+Open the following academic journal websites ONE BY ONE using Playwright and Playwright MCP if Playwright and Playwright MCP is not installed install it, navigate to their Current/Latest Issue, and extract  bibliographic details of all individual articles listed in that issue.
 
 ## Target Journal Websites:
 1. https://journal.gujaratvidyapith.org/index.php/vp
-2. https://indianjournals.com/journals/LH
 
 ## STRICT RULES - READ CAREFULLY BEFORE STARTING:
 
 ### URL Control Rules (MOST IMPORTANT):
 - You must process ONLY ONE journal at a time
-- Complete ALL extraction work for Journal 1 FULLY before 
-  moving to Journal 2
-- While working on Journal 1, you are STRICTLY FORBIDDEN 
-  from navigating to any URL that does not belong to 
-  Journal 1's domain
-- While working on Journal 2, you are STRICTLY FORBIDDEN 
-  from navigating to any URL that does not belong to 
-  Journal 2's domain
-- NEVER open or switch to another journal's URL 
-  while extraction of current journal is still in progress
-- If you accidentally land on a wrong URL/domain, 
-  immediately go BACK to the correct journal URL 
-  and continue extraction
-- Do NOT follow any recommended articles, related journals, 
-  or sidebar links that lead to other journal websites
-- Do NOT click on any advertisement or promotional links
-- Only follow links that belong to the CURRENT journal's 
-  article pages for the current issue being processed
+- Complete ALL extraction work for Journal 1 FULLY before moving to next journal website
+- While working on Journal 1, you are STRICTLY FORBIDDEN from navigating to any URL that does not belong to Journal 1's domain
+- While working on specific Journal website, you are STRICTLY FORBIDDEN 
+  from navigating to any URL that does not belong to that specific Journal webiste
+- NEVER open or switch to another journal's URL while extraction of current journal is still in progress
+- If you accidentally land on a wrong URL/domain, immediately go BACK to the correct journal URL and continue extraction
+- Do NOT follow any recommended articles, related journals, or sidebar links that lead to other journal websites
+- Do NOT click on any advertisement or promotional links 
+- Only follow links that belong to the CURRENT journal's article pages for the current issue being processed
 
 ### Allowed URL Patterns:
 - For Journal 1:
   * Allowed: https://journal.gujaratvidyapith.org/index.php/vp*
   * NOT Allowed: Any other journal URL 
 
-- For Journal 2:
-  * Allowed: https://indianjournals.com/journals/LH*
-  * NOT Allowed: Any other journal URL   
 
 ---
 
@@ -52,22 +39,16 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
   * Note down the exact URL of the current issue page
   * Wait for the page to fully load before extracting data
   * Scroll down completely to load all article listings
-  * Handle cookie consent popups or overlays if they appear 
-    (click Accept/Close to dismiss them)
+  * Handle cookie consent popups or overlays if they appear (click Accept/Close to dismiss them)
   * Do NOT click on any link that leads outside 
     the current journal domain
 
 ### Step 2: Article List Collection (Before Individual Extraction)
-- Before opening individual article pages, FIRST collect 
-  and save a complete list of ALL article URLs/links 
-  listed on the current issue page of the journal
+- Before opening individual article pages, FIRST collect and save a complete list of ALL article URLs/links listed on the current issue page of the journal
 - Save this list in memory before proceeding
-- This ensures you do not lose track of remaining 
-  articles if navigation occurs
-- Verify each saved article URL belongs to the 
-  correct journal domain before visiting it
-- Total count of articles found must be noted before 
-  starting individual article extraction
+- This ensures you do not lose track of remaining articles if navigation occurs
+- Verify each saved article URL belongs to the correct journal domain before visiting it
+- Total count of articles found must be noted before starting individual article extraction
 
 ### Step 3: Data Extraction (Article by Article)
 - Process articles ONE BY ONE from your saved list
@@ -77,8 +58,7 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
   * If wrong URL detected → Go back → Pick correct URL
   * Extract all required fields
   * Mark article as DONE in your tracking list
-  * Go back to the issue page OR open next article 
-    from your saved list
+  * Go back to the issue page OR open next article from your saved list
   * DO NOT follow any other links on the article page
 
 - Extract the following details for EVERY article:
@@ -99,30 +79,24 @@ Open the following academic journal websites ONE BY ONE using Playwright, naviga
     Total articles extracted: [X]"
   * Save all extracted data for Journal 1 in memory
   * Close or reset the browser tab
-  * Only THEN open Journal 2 URL
-  * Repeat Steps 1 to 3 for Journal 2
+  * Only THEN open next Journal URL, if available
+  * Repeat Steps 1 to 3 for all the spcified Target Journal Websites
 
 ### Step 5: Data Organization
 - Organize all extracted data journal-wise
-- Within each journal, sort articles by page numbers 
-  in ascending order
-- Maintain strict separation between journals 
-  during organization
-- Maintain the language script as it is and write it using utf-8 fonts.
+- Within each journal, sort articles by page numbers in ascending order
+- Maintain strict separation between journals during organization
+- Use uft-8 for the non-english language and maintain the original language.
 
 ### Step 6: PDF Generation - Newsletter Format
-After ALL journals are fully extracted and data is 
-organized, create a single professionally formatted 
-PDF file named:
-"Journal_Current_Issue_Newsletter.pdf"
+After ALL journals are fully extracted and data is organized, create a single professionally formatted PDF file named: "Journal_Current_Issue_Newsletter.pdf"
 
 #### PDF Layout and Formatting:
 
 **Overall Style:**
 - Newsletter style format
 - Clean, academic, and professional appearance
-- Use a two-column layout for article details 
-  where appropriate
+- Use a two-column layout for article details where appropriate
 - Add a decorative header and footer on each page
 
 **PDF Structure:**
@@ -132,8 +106,7 @@ PDF file named:
 - Newsletter Title: "CUCOLIS"
 - Subtitle: "CURRENT CONTENTS FOR LIBRARY AND INFORMATION SCIENCE"
 - Period: (today's Month and Year)
-- List of Journals covered in this newsletter
-  with their Volume and Issue details
+- List of Journals covered in this newsletter with their Volume and Issue details
 - A horizontal divider line
 
 [FOR EACH JOURNAL - New Section starts on a new page]
@@ -180,7 +153,7 @@ PDF file named:
 
 1. STRICT JOURNAL ISOLATION: 
    - Never mix data of one journal with another
-   - Never open Journal 2 URL while Journal 1 is still being processed
+   - Never open another Journal's URL while Journal 1 is still being processed
    - Never follow links to other journals found on the current journal page
 
 2. ARTICLE TRACKING:
@@ -192,13 +165,11 @@ PDF file named:
    - If not matching → SKIP that URL → Continue with next article from saved list
 
 4. ERROR HANDLING:
-   - If a page fails to load → Retry 2 times → If still failing → Mark as "Page Load Failed" 
-     and move to next article
+   - If a page fails to load → Retry 2 times → If still failing → Mark as "Page Load Failed" and move to next article
    - If a journal website blocks automated access → Note it in the PDF → Move to next journal
 
 5. DO NOT:
    - Do not click on "Related Articles" links
-   - Do not try to open any Fulltext link or PDF file
    - Do not click on "Recommended for You" links
    - Do not click on other journal name links found on the page
    - Do not navigate to publisher homepage
