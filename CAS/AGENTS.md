@@ -198,6 +198,7 @@ PDF file named:
 
 5. DO NOT:
    - Do not click on "Related Articles" links
+   - Do not try to open any Fulltext link or PDF file
    - Do not click on "Recommended for You" links
    - Do not click on other journal name links found on the page
    - Do not navigate to publisher homepage
