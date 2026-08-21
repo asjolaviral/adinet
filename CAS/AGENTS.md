@@ -128,7 +128,7 @@ PDF file named:
 **PDF Structure:**
 
 [PAGE 1 - COVER PAGE]
-- Use ADINET transparent logo (adomet_logo.png) in center
+- Use ADINET transparent logo (adinet_logo.jpg) in center
 - Newsletter Title: "CUCOLIS"
 - Subtitle: "CURRENT CONTENTS FOR LIBRARY AND INFORMATION SCIENCE"
 - Period: (today's Month and Year)
